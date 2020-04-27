@@ -28,17 +28,18 @@ public class Ball : MonoBehaviour
         float vertAttackAngle = (transform.position.y - col.transform.position.y)/col.collider.bounds.size.y;
         
         if (collideObj.name == "RacketLeft" || collideObj.name == "RacketRight"){
-            
+
             body.velocity = new Vector2(
                                 (collideObj.name == "RacketLeft") ? 1 : -1,
                                 vertAttackAngle).normalized * speed;
+            
+            scoreManager.ScoreUpdate(collideObj.name == "RacketLeft" ? 1 : 2, 1);
 
         }
 
         if (collideObj.name == "Barrier"){
 
             body.velocity = new Vector2(1, vertAttackAngle).normalized * speed;
-            GameObject.Find("Barrier").GetComponent<Barrier>().decreaseHP();
             
         }
 
@@ -48,7 +49,7 @@ public class Ball : MonoBehaviour
     {
 
         if (trigger.name == "WallLeft" || trigger.name == "WallRight"){
-            scoreManager.ScoreUpdate(trigger.name == "WallRight" ? 1 : 2);
+            scoreManager.ScoreUpdate(trigger.name == "WallRight" ? 1 : 2, 5);
         }
 
         ResetBall();

@@ -1,22 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Barrier : MonoBehaviour
 {
-    public Text barrierHPText;
-    public int barrierHP = 2;
+    public int ownerId;
 
-    public void decreaseHP()
+    public void Init(int ownerId)
     {
-        barrierHP--;
-        barrierHPText.text = barrierHP.ToString();
-        if (barrierHP == 0){
-            Destroy(barrierHPText);
-            Destroy(gameObject);
+        this.ownerId = ownerId;
+
+        if (ownerId == 1){
+            gameObject.transform.RotateAround(Vector3.up, Mathf.PI);
         }
-   
     }
 
 }

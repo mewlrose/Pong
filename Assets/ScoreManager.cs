@@ -8,19 +8,22 @@ public class ScoreManager : MonoBehaviour
 {
 
     public Text playerOneScoreText, playerTwoScoreText;
-    [HideInInspector] public int playerOneScore, playerTwoScore;
-    public int winScore = 10;
+    public int winScore = 30;
 
-    public void ScoreUpdate(int playerId){
+    public void ScoreUpdate(int playerId, int pointIncrement){
 
-        if (playerId == 1){playerOneScore ++;} else {playerTwoScore++;}
+        Player currentPlayer = GameObject.Find((playerId == 1) ? "RacketLeft" : "RacketRight")
+            .GetComponent<Player>();
+
+        currentPlayer.score += pointIncrement;
+
         ((playerId == 1) ? playerOneScoreText : playerTwoScoreText).text = 
-            ((playerId == 1) ? playerOneScore : playerTwoScore).ToString();
+            currentPlayer.score.ToString();
 
-        if (playerOneScore >= winScore || playerTwoScore >= winScore){
+        if (currentPlayer.score >= winScore) {
             SceneManager.LoadScene("Player "+ playerId.ToString() +" Win");
         }
 
     }
-    
+
 } 
