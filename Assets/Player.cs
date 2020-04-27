@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public GameObject barrierPrefab;
-    public float speed = 20;
+    public float speed = 40;
     public string axis = "Vertical";
     public int score = 0;
     public int playerId;

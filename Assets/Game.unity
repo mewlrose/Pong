@@ -461,7 +461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOneScoreText: {fileID: 2049494397}
   playerTwoScoreText: {fileID: 1754735651}
-  winScore: 20
+  winScore: 1000
 --- !u!4 &780927229
 Transform:
   m_ObjectHideFlags: 0
@@ -968,7 +968,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8025eb2b8b8d24d8396a4b33d85a57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalSpeed: 40
   speed: 30
+  accelerationRate: 10
 --- !u!1 &1754735649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,11 +1191,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b078264dcad6eda46af2d3264b044f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barrierPrefab: {fileID: 2974548542957175824, guid: d0c40cc0b564ede448012ace3266b62e,
+    type: 3}
   speed: 30
   axis: Vertical2
   score: 0
-  barrierPrefab: {fileID: 2974548542957175824, guid: d0c40cc0b564ede448012ace3266b62e,
-    type: 3}
+  playerId: 0
 --- !u!1 &1853867532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,11 +1420,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b078264dcad6eda46af2d3264b044f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barrierPrefab: {fileID: 2974548542957175824, guid: d0c40cc0b564ede448012ace3266b62e,
+    type: 3}
   speed: 30
   axis: Vertical
   score: 0
-  barrierPrefab: {fileID: 2974548542957175824, guid: d0c40cc0b564ede448012ace3266b62e,
-    type: 3}
+  playerId: 0
 --- !u!1 &2049494395
 GameObject:
   m_ObjectHideFlags: 0
