@@ -13,6 +13,8 @@ public class Barrier : MonoBehaviour
         if (ownerId == 1){
             gameObject.transform.RotateAround(Vector3.up, Mathf.PI);
         }
+
+        Destroy(gameObject, 1.5F);
     }
 
 }
