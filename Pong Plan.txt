@@ -1,0 +1,12 @@
+//PLAN
+//finish winning/losing pages
+//implement in game shop/in game currency
+//in game currency can be based off of current score * (specific number), or based on how many hits you made with your racket
+//add items
+//-barrier with cooldown or one time use with time limit
+//-barrier can take specific number of hits before going on cooldown
+//-can have cannon to break down barrier of enemy more
+//-mine that sends ball going back towards enemy without your having to use racket
+//-something that slows down the ball's speed when it enters your side
+//-make racket bigger for one hit or make enemy racket smaller for one hit
+//add tutorial (low priority)
